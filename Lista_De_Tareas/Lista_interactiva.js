@@ -249,7 +249,7 @@ const estilo = document.createElement("style");
 estilo.textContent = `
   .grid-anual {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     padding: 10px;
   }
@@ -285,4 +285,5 @@ estilo.textContent = `
   }
 `;
 document.head.appendChild(estilo);
+
 
