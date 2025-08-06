@@ -226,3 +226,69 @@ button:hover {
 .btn-volver:hover {
   background-color: #2980b9;
 }
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .store,
+  #store {
+    justify-content: center;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #cart {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .carrito-panel {
+    width: 100%;
+    right: -100%; /* fuera completamente en móviles */
+  }
+
+  .carrito-panel.active {
+    right: 0;
+  }
+
+  #cart-icon-container {
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  #cart-icon-container img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .btn-volver {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product img {
+    height: 120px;
+  }
+
+  .product button,
+  #clearCartBtn,
+  .btn-volver {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #toast {
+    font-size: 14px;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 15px;
+  }
+}
+
