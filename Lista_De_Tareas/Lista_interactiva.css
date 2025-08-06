@@ -399,5 +399,51 @@ body.dark .meta {
   }
 }
 
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1em;
+  }
+
+  #formSection, #calendarSection {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  #calendar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #taskList {
+    margin-top: 1.5em;
+    padding: 1em;
+  }
+
+  .taskItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #cartSection, #taskSection {
+    width: 100%;
+    max-width: 100%;
+    padding: 1em;
+    margin-bottom: 1.5em;
+  }
+
+  .cartItem {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: flex-start;
+  }
+
+  .cartItem .itemDetails,
+  .cartItem .itemActions {
+    width: 100%;
+  }
+}
+
 
 
