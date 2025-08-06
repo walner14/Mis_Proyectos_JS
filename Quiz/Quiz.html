@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de JavaScript Mejorado</title>
+  <link rel="stylesheet" href="stylesquiz.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="animate__animated animate__fadeInDown">Quiz de JavaScript</h1>
+    <button id="toggleTheme" class="theme-button"></button>
+    <div id="quiz-container">
+      <div id="question" class="animate__animated"></div>
+      <ul id="options"></ul>
+      <div id="feedback"></div>
+      <div id="progress-bar"><div id="progress"></div></div>
+    </div>
+    <div id="result" class="result hide animate__animated"></div>
+    <div id="history" class="history hide"></div>
+    <button id="next" class="button">Siguiente</button>
+    <button id="retry" class="button hide">Reintentar</button>
+    <button onclick="location.href='../index.html'" class="btn-volver">🔙 Volver al Menú</button>
+
+  </div>
+  <audio id="sound-correct" src="sounds/correct.mp3" preload="auto"></audio>
+  <audio id="sound-wrong" src="sounds/wrong.mp3" preload="auto"></audio>
+  <audio id="sound-next" src="sounds/next.mp3" preload="auto"></audio>
+
+
+<!-- Audios para resultados -->
+<audio id="sound-fireworks" src="sounds/fireworks.mp3"></audio>
+<audio id="sound-applause" src="sounds/applause.mp3"></audio>
+<audio id="sound-sad" src="sounds/sad.mp3"></audio>
+
+<!-- Contenedor para animaciones -->
+<div id="animation-container"></div>
+
+<!-- Biblioteca para animaciones (confetti) -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script src="scriptquiz.js"></script>
+</body>
+</html>
+

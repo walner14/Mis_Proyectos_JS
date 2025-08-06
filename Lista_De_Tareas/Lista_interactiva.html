@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tareas Interactiva</title>
+  <link rel="stylesheet" href="Lista_interactiva.css">
+</head>
+<body>
+  
+
+  <div class="container">
+    <div class="calendar-container">
+      <h3>📅 Calendario</h3>
+      <div id="calendar"></div>
+    </div>
+
+   
+    <div class="task-container" id="app">
+      <h2>📋 Mi Lista de Tareas</h2>
+
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Escribe una tarea..." />
+        <label><input type="checkbox" id="enablePriority"> Prioridad</label>
+        <select id="priorityInput" disabled>
+          <option value="baja">🟢 Baja</option>
+          <option value="media">🟡 Media</option>
+          <option value="alta">🔴 Alta</option>
+        </select>
+        <button id="addBtn">Agregar</button>
+      </div>
+
+      <div class="task-controls">
+        <input type="text" id="searchInput" placeholder="🔍 Buscar tareas..." />
+        <button onclick="sortTasksAlphabetically()">Ordenar A-Z</button>
+      </div>
+
+      <div id="stats">
+        <p>Total: <span id="total">0</span> | Completadas: <span id="completed">0</span> | Pendientes: <span id="pending">0</span></p>
+      </div>
+
+      <div class="filters">
+        <button onclick="filterTasks('all')">Todas</button>
+        <button onclick="filterTasks('completed')">Completadas</button>
+        <button onclick="filterTasks('pending')">Pendientes</button>
+     </div>
+
+      <ul id="taskList"></ul>
+
+      <button onclick="location.href='../index.html'" class="btn-volver">🔙 Volver al Menú</button>
+    </div> 
+  </div>
+
+  <script src="Lista_interactiva.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</body>
+</html>

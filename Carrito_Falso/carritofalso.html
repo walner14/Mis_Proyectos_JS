@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Carrito</title>
+  <link rel="stylesheet" href="Carrito-Falso.css" />
+</head>
+<body>
+
+  <button onclick="location.href='../index.html'" class="btn-volver">🔙 Volver al Menú</button>
+
+  <h2>🛍️ Tienda Virtual</h2>
+
+  <div class="store" id="store"></div>
+
+ <!-- Ícono del carrito (ya lo tienes) -->
+<div id="cart-icon-container">
+  <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" id="cart-icon" />
+  <span id="cart-counter">0</span>
+</div>
+
+<!-- Panel deslizable del carrito (actualiza con estas clases e ID) -->
+<div id="cart-container" class="carrito-panel">
+  <h2>Carrito</h2>
+  <div id="cart">
+    <ul id="cartItems"></ul>
+    <p class="total" id="total">Total: $0</p>
+    <p id="cart-count"></p>
+    <button id="clearCartBtn">Vaciar carrito</button>
+  </div>
+</div>
+
+  <!-- Notificaciones tipo toast -->
+  <div id="toast" class="toast hidden"></div>
+
+
+
+  <!-- Script -->
+  <script src="Carrito-Falso.js"></script>
+</body>
+</html>
+
